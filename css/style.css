@@ -35,3 +35,7 @@ html, body {
   margin-left: 20vw;
   margin-right: 20vw;
 }
+
+.collapsed {
+  display: none;
+}
