@@ -1,3 +1,11 @@
+let setNameCookie = function() {
+  let name = document.getElementsByName("name")[0];
+
+  document.cookie= "name=" + name;
+
+  update();
+};
+
 let update = function() {
   if (document.cookie != "") {
     if (document.cookie.includes("name=")) {
