@@ -39,3 +39,11 @@ html, body {
 .collapsed {
   display: none;
 }
+
+.section-text{
+  font-size: 20pt;
+}
+
+.faq-title{
+  font-size: 25pt;
+}

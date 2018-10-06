@@ -1,3 +1,4 @@
+// From https://www.w3schools.com/js/js_cookies.asp
 let getCookie = function(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
@@ -25,7 +26,6 @@ let setNameCookie = function() {
 let update = function() {
   if (document.cookie != "") {
     if (document.cookie.includes("name=")) {
-      console.log(document.cookie);
       // Show collapsed sections.
       let sections = document.getElementsByClassName("section");
       Array.from(sections).forEach(elem => {
@@ -37,12 +37,13 @@ let update = function() {
       headElement = document.getElementById("head");
       headElement.classList.add("collapsed");
 
-      // Get name from cookie
+      // Get name from cookies.
       name = getCookie("name");
       greeting = "Hi " + name + "!";
-      // Dispaly greeting name
+      // Dispaly greeting.
       let greetingElement = document.getElementById("greeting-name");
       greetingElement.innerHTML = greeting;
+      
     } else {
       console.log("No name cookie set");
     }
