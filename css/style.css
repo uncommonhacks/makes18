@@ -6,7 +6,9 @@
 html, body {
   padding: 0;
   margin: 0;
-  background: white;
+  background-image: url("../img/mainpagebrush.svg");
+  /* TODO do somethign about the background not fitting */
+  /* also the background is different on the input landing than on the landing, but I'm leaving it for now*/
   height: 100%;
 }
 
@@ -22,9 +24,6 @@ html, body {
   width: 100vw;
   display: table;
 
-  border-color: black;
-  border-width: 5px;
-  border-style: solid;
 }
 
 .next {
@@ -33,18 +32,12 @@ html, body {
   display: table;
   text-align: center;
 
-  border-color: red;
-  border-width: 5px;
-  border-style: solid;
 }
 
 /* ref: https://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-for-all-browsers */
 .vertically-centered {
   display: table-cell;
   vertical-align: middle;
-
-  border-color: black;
-  border-width: 5px;
 }
 
 .container {
