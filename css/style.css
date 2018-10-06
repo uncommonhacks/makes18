@@ -20,6 +20,7 @@ html, body {
 .section {
   height: 90vh;
   width: 100vw;
+  display: table;
 
   border-color: black;
   border-width: 5px;
@@ -29,6 +30,7 @@ html, body {
 .next {
   height: 10vh;
   width: 100vw;
+  display: table;
   text-align: center;
 
   border-color: red;
