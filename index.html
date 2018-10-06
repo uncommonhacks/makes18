@@ -6,18 +6,12 @@
 
     <link href="css/style.css" rel="stylesheet">
     <script defer src="js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-            crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-            crossorigin="anonymous">
-    </script>
   </head>
   <body>
     <div class="section" id="head">
-      <h1>Main landing</h1>
-      Name:<br> <input type="text" name="name">
+      <h3>Hi! What's your name?</h3>
+      <br>
+      <input type="text" name="name">
       <button onclick="setNameCookie()">Submit name</button>
     </div>
 
@@ -40,21 +34,26 @@
     <div class="section collapsed" id="faq">
       <div class="vertically-centered">
         <div class="container">
-          <p class = section-text> <b>FAQ</b> </p>
+          <h1>FAQ</h1>
 
-          <!-- TODO these will be collapsable or whatever -->
-          <p class="faq-title">+ Where is Uncommon Makes?</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
-          <p class="faq-title">+ I've never been to a hackathon, can I come? What should I bring?</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
-          <p class="faq-title">+ Do I have to be a CS major to participate?</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
-          <p class="faq-title">+ I'm a graduate student at UChicago, can I come?</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
-          <p class="faq-title">+ I don't attend UChicago, can I come?</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
-          <p class="faq-title">+ Do I need a team?</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+          <h2 onclick="toggleFAQ(1)">+ Where is Uncommon Makes?</h2>
+          <p id="faq-1" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+
+          <h2 onclick="toggleFAQ(2)">+ I've never been to a hackathon, can I come? What should I bring?</h2>
+          <p id="faq-2" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+
+          <h2 onclick="toggleFAQ(3)">+ Do I have to be a CS major to participate?</h2>
+          <p id="faq-3" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+
+          <h2 onclick="toggleFAQ(4)">+ I'm a graduate student at UChicago, can I come?</h2>
+          <p id="faq-4" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+
+          <h2 onclick="toggleFAQ(5)">+ I don't attend UChicago, can I come?</h2>
+          <p id="faq-5" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+
+          <h2 onclick="toggleFAQ(6)">+ Do I need a team?</h2>
+          <p id="faq-6" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+
         </div>
       </div>
     </div>
@@ -106,12 +105,9 @@
               <td>Closing Ceremony</td>
             </tr>
           </table>
-
-
         </div>
-
       </div>
+    </div> <!-- section -->
 
-    </div>
   </body>
 </html>

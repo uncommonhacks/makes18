@@ -30,7 +30,7 @@ let setNameCookie = function() {
 let update = function() {
   let name = getCookie("name");
   if (name != "") {
-      // Show collapsed sections.
+      // Show collapsed sections
       let sections = document.getElementsByClassName("section");
       Array.from(sections).forEach(elem => {
         if (elem.classList.contains("collapsed")) {
@@ -38,16 +38,33 @@ let update = function() {
         }
       });
 
-      // Collapse the name input section.
+      // Collapse the name input section
       let headElement = document.getElementById("head");
       headElement.classList.add("collapsed");
 
-      // Display greeting.
+      // Display greeting
       let greetingElement = document.getElementById("greeting-name");
       greetingElement.innerHTML = "Hi " + name + "!";
   } else {
     console.log("No name cookie set, rendering the input page.");
   }
+};
+
+let toggleFAQ = function(ind) {
+  if (ind < 0 || ind > 6) {
+    return;
+  }
+
+  let collapsedFAQSection = document.getElementById("faq-" + ind);
+
+  // Add or remove the faq-collapsed class
+  if (collapsedFAQSection.classList.contains("faq-collapsed")) {
+    collapsedFAQSection.classList.remove("faq-collapsed");
+  } else {
+    collapsedFAQSection.classList.add("faq-collapsed");
+  }
+
+  console.log("Toggled" + ind);
 };
 
 // First call to update initializes the page
