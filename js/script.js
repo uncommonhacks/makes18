@@ -1,11 +1,12 @@
 // From https://www.w3schools.com/js/js_cookies.asp
+// Gets a cookie by name, or returns the empty string
 let getCookie = function(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for(var i = 0; i <ca.length; i++) {
+  var ca = decodedCookie.split(";");
+  for(var i = 0; i < ca.length; i++) {
     var c = ca[i];
-    while (c.charAt(0) == ' ') {
+    while (c.charAt(0) == " ") {
       c = c.substring(1);
     }
     if (c.indexOf(name) == 0) {
@@ -15,6 +16,7 @@ let getCookie = function(cname) {
   return "";
 };
 
+// Sets the name cookie, which is used to populate name fields on the page
 let setNameCookie = function() {
   let name = document.getElementsByName("name")[0].value;
 
@@ -23,9 +25,11 @@ let setNameCookie = function() {
   update();
 };
 
+// Updates or initializes the page, checking if a name cookie is set and rendering
+// things accordingly
 let update = function() {
-  if (document.cookie != "") {
-    if (document.cookie.includes("name=")) {
+  let name = getCookie("name");
+  if (name != "") {
       // Show collapsed sections.
       let sections = document.getElementsByClassName("section");
       Array.from(sections).forEach(elem => {
@@ -33,23 +37,18 @@ let update = function() {
           elem.classList.remove("collapsed");
         }
       });
-      // Remove name input section.
-      headElement = document.getElementById("head");
+
+      // Collapse the name input section.
+      let headElement = document.getElementById("head");
       headElement.classList.add("collapsed");
 
-      // Get name from cookies.
-      name = getCookie("name");
-      greeting = "Hi " + name + "!";
-      // Dispaly greeting.
+      // Display greeting.
       let greetingElement = document.getElementById("greeting-name");
-      greetingElement.innerHTML = greeting;
-      
-    } else {
-      console.log("No name cookie set");
-    }
+      greetingElement.innerHTML = "Hi " + name + "!";
   } else {
-    console.log("No cookies set; should just display main landing");
+    console.log("No name cookie set, rendering the input page.");
   }
 };
 
+// First call to update initializes the page
 update();
