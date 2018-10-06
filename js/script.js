@@ -30,8 +30,8 @@ let setNameCookie = function() {
 let update = function() {
   let name = getCookie("name");
   if (name != "") {
-      // Show collapsed sections
-      let sections = document.getElementsByClassName("section");
+      // Show collapsed sections and blocks
+      let sections = document.getElementsByClassName("section-container");
       Array.from(sections).forEach(elem => {
         if (elem.classList.contains("collapsed")) {
           elem.classList.remove("collapsed");

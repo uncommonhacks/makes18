@@ -8,106 +8,140 @@
     <script defer src="js/script.js"></script>
   </head>
   <body>
-    <div class="section" id="head">
+    <div style="height: 100vh" class="section" id="head">
       <h3>Hi! What's your name?</h3>
       <br>
       <input type="text" name="name">
       <button onclick="setNameCookie()">Submit name</button>
     </div>
 
-    <div class="section collapsed" id="greeting">
-      <h1 id="greeting-name"></h1>
-      <h2>11.12.2018</h2>
-      <h3>9 AM - 7 PM</h3>
-      <h3>Polsky Exchange North</h3>
+    <div class="section-container collapsed">
+      <div class="section" id="greeting">
+        <h1 id="greeting-name"></h1>
+        <h2>11.12.2018</h2>
+        <h3>9 AM - 7 PM</h3>
+        <h3>Polsky Exchange North</h3>
+
+        <a href="">REGISTER</a>
+      </div>
+
+      <div class="next">
+        <a href="#description">
+          <img src="img/downarrow.svg" />
+        </a>
+      </div>
     </div>
 
-    <div class="section collapsed" id="description">
-      <a href="">REGISTER</a>
-      <div class="vertically-centered">
-          <div class="container section-text">
-            <p><b>Uncommon Makes</b> is a day-long experience focused on encouraging University of Chicago students to engage with new technologies, build a project of their own, and get involved with the tech community on campus. We'll provide space, food, workshops, time, and support for you to have a uniquely uncommon time.</p>
+    <div class="section-container collapsed">
+      <div class="section" id="description">
+        <div class="vertically-centered">
+            <div class="container section-text">
+              <p><b>Uncommon Makes</b> is a day-long experience focused on encouraging University of Chicago students to engage with new technologies, build a project of their own, and get involved with the tech community on campus. We'll provide space, food, workshops, time, and support for you to have a uniquely uncommon time.</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="next">
+        <a href="#faq">
+          <img src="img/downarrow.svg" />
+        </a>
+      </div>
+    </div>
+
+    <div class="section-container collapsed">
+      <div class="section" id="faq">
+        <div class="vertically-centered">
+          <div class="container">
+            <h1>FAQ</h1>
+
+            <h2 onclick="toggleFAQ(1)">+ Where is Uncommon Makes?</h2>
+            <p id="faq-1" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+
+            <h2 onclick="toggleFAQ(2)">+ I've never been to a hackathon, can I come? What should I bring?</h2>
+            <p id="faq-2" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+
+            <h2 onclick="toggleFAQ(3)">+ Do I have to be a CS major to participate?</h2>
+            <p id="faq-3" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+
+            <h2 onclick="toggleFAQ(4)">+ I'm a graduate student at UChicago, can I come?</h2>
+            <p id="faq-4" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+
+            <h2 onclick="toggleFAQ(5)">+ I don't attend UChicago, can I come?</h2>
+            <p id="faq-5" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+
+            <h2 onclick="toggleFAQ(6)">+ Do I need a team?</h2>
+            <p id="faq-6" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+
           </div>
-      </div>
-    </div>
-
-    <div class="section collapsed" id="faq">
-      <div class="vertically-centered">
-        <div class="container">
-          <h1>FAQ</h1>
-
-          <h2 onclick="toggleFAQ(1)">+ Where is Uncommon Makes?</h2>
-          <p id="faq-1" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
-
-          <h2 onclick="toggleFAQ(2)">+ I've never been to a hackathon, can I come? What should I bring?</h2>
-          <p id="faq-2" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
-
-          <h2 onclick="toggleFAQ(3)">+ Do I have to be a CS major to participate?</h2>
-          <p id="faq-3" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
-
-          <h2 onclick="toggleFAQ(4)">+ I'm a graduate student at UChicago, can I come?</h2>
-          <p id="faq-4" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
-
-          <h2 onclick="toggleFAQ(5)">+ I don't attend UChicago, can I come?</h2>
-          <p id="faq-5" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
-
-          <h2 onclick="toggleFAQ(6)">+ Do I need a team?</h2>
-          <p id="faq-6" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
 
         </div>
       </div>
+
+      <div class="next">
+        <a href="#schedule">
+          <img src="img/downarrow.svg" />
+        </a>
+      </div>
     </div>
 
-    <div class="section collapsed" id="schedule">
-      <div class="vertically-centered">
-        <div class="container section-text">
-          <p> <b>Schedule</b> <br> </p>
+    <div class="section-container collapsed">
+      <div class="section" id="schedule">
+        <div class="vertically-centered">
+          <div class="container section-text">
+            <p> <b>Schedule</b> <br> </p>
 
-          <table style="width:100%">
-            <tr>
-              <td>10 - 1030</td>
-              <td>Opening Ceremony</td>
-            </tr>
-            <tr>
-              <td>1030 - 12</td>
-              <td>Workshops</td>
-            </tr>
-            <tr>
-              <td>12 - 1230</td>
-              <td>Project Work</td>
-            </tr>
-            <tr>
-              <td>1230 - 1</td>
-              <td>Lunch</td>
-            </tr>
-            <tr>
-              <td>1 - 330</td>
-              <td>Project Work</td>
-            </tr>
-            <tr>
-              <td>330 - 4</td>
-              <td>Uncommon Break</td>
-            </tr>
-            <tr>
-              <td>4 - 5</td>
-              <td>Project Work</td>
-            </tr>
-            <tr>
-              <td>5 - 530</td>
-              <td>Project Presentations</td>
-            </tr>
-            <tr>
-              <td>530 - 6</td>
-              <td>Dinner</td>
-            </tr>
-            <tr>
-              <td>6 - 7</td>
-              <td>Closing Ceremony</td>
-            </tr>
-          </table>
+            <table style="width:100%">
+              <tr>
+                <td>10 - 1030</td>
+                <td>Opening Ceremony</td>
+              </tr>
+              <tr>
+                <td>1030 - 12</td>
+                <td>Workshops</td>
+              </tr>
+              <tr>
+                <td>12 - 1230</td>
+                <td>Project Work</td>
+              </tr>
+              <tr>
+                <td>1230 - 1</td>
+                <td>Lunch</td>
+              </tr>
+              <tr>
+                <td>1 - 330</td>
+                <td>Project Work</td>
+              </tr>
+              <tr>
+                <td>330 - 4</td>
+                <td>Uncommon Break</td>
+              </tr>
+              <tr>
+                <td>4 - 5</td>
+                <td>Project Work</td>
+              </tr>
+              <tr>
+                <td>5 - 530</td>
+                <td>Project Presentations</td>
+              </tr>
+              <tr>
+                <td>530 - 6</td>
+                <td>Dinner</td>
+              </tr>
+              <tr>
+                <td>6 - 7</td>
+                <td>Closing Ceremony</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
-    </div> <!-- section -->
+
+      <div class="next">
+        <a href="#greeting">
+          <img src="img/uparrow.svg" />
+        </a>
+      </div>
+    </div>
 
   </body>
 </html>

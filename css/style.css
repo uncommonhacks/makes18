@@ -12,11 +12,23 @@ html, body {
 
 .section {
   position: relative;
-  min-height: 100vh;
+  height: 90vh;
   width: 100vw;
   display: table;
 
   border-color: black;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.next {
+  height: 10vh;
+  width: 100vw;
+  position: relative;
+  display: table;
+  text-align: center;
+
+  border-color: red;
   border-width: 5px;
   border-style: solid;
 }
