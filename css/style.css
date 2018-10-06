@@ -63,3 +63,16 @@ html, body {
 .faq-title{
   font-size: 25pt;
 }
+
+#left-greeting {
+  width: 50vw;
+  float: left;
+  margin-left: 15px;
+}
+
+#right-greeting {
+  width: 50vw;
+  float: right;
+  text-align: right;
+  margin-right: 15px;
+}
