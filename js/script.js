@@ -67,5 +67,21 @@ let toggleFAQ = function(ind) {
   console.log("Toggled" + ind);
 };
 
-// First call to update initializes the page
-update();
+let init = function() {
+  // Render things based on whether the name cookie is set
+  update();
+
+  // Setup enter keypress handler for name input
+  let nameInput = document.getElementsByName("name")[0];
+
+  nameInput.addEventListener("keyup", function(event) {
+    // Probably doesn't do anything
+    event.preventDefault();
+
+    if (event.keyCode === 13) {
+      setNameCookie();
+    }
+  });
+};
+
+init();
