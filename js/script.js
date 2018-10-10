@@ -36,27 +36,35 @@ let resetNameCookie = function() {
 // Updates or initializes the page, checking if a name cookie is set and rendering
 // things accordingly
 let update = function() {
+  console.log(navigator.cookieEnabled);
   let name = getCookie("name");
   if (name != "") {
-      // Show collapsed sections and blocks
-      let sections = document.getElementsByClassName("section-container");
-      Array.from(sections).forEach(elem => {
-        if (elem.classList.contains("collapsed")) {
-          elem.classList.remove("collapsed");
-        }
-      });
+    // Show collapsed sections and blocks
+    let sections = document.getElementsByClassName("section-container");
+    Array.from(sections).forEach(elem => {
+      if (elem.classList.contains("collapsed")) {
+        elem.classList.remove("collapsed");
+      }
+    });
 
-      // Collapse the name input section
-      let inputLandingElement = document.getElementById("inputLanding");
-      inputLandingElement.classList.add("collapsed");
+    // Collapse the name input section
+    let inputLandingElement = document.getElementById("inputLanding");
+    inputLandingElement.classList.add("collapsed");
 
-      // Display greeting
-      let greetingElement = document.getElementById("greeting-name");
-      greetingElement.innerHTML = "Hi " + name + "!";
+    // Display greeting
+    let greetingElement = document.getElementById("greeting-name");
+    greetingElement.innerHTML = "Hi " + name + "!";
 
-      // Display wrong name button
-      let wrongNameElement = document.getElementById("wrong-name");
-      wrongNameElement.innerHTML = "Not " + name + "?";
+    // Display wrong name button
+    let wrongNameElement = document.getElementById("wrong-name");
+    wrongNameElement.innerHTML = "Not " + name + "?";
+
+    // Collapse the faq sections
+    for (let i = 1; i <= 6; i++) {
+      let faqSection = document.getElementById("faq-" + i);
+      faqSection.classList.add("faq-collapsed");
+    }
+    // let faqSections = 
   } else {
     console.log("No name cookie set, rendering the input page.");
 
@@ -92,11 +100,6 @@ let toggleFAQ = function(ind) {
 let init = function() {
   // Render things based on whether the name cookie is set
   update();
-
-  // Unhide the landing
-  let inputLanding = document.getElementById("#inputLanding");
-  inputLanding.classList.remove("collapsed");
-  console.log("hi");
 
   // Setup enter keypress handler for name input
   let nameInput = document.getElementsByName("name")[0];
