@@ -6,6 +6,7 @@
 
     <link href="css/style.css" rel="stylesheet">
     <script defer src="js/script.js"></script>
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.3/dist/smoothscroll.min.js"></script>
   </head>
   <body>
     <div class="section-container" id="inputLanding">
@@ -34,10 +35,8 @@
 
       </div>
 
-      <div class="next">
-        <a href="#description">
-          <img src="img/downarrow.svg" />
-        </a>
+      <div class="next" onclick="document.querySelector('#description').scrollIntoView({behavior: 'smooth'})">
+        <img src="img/downarrow.svg" />
       </div>
     </div>
 
@@ -50,10 +49,8 @@
         </div>
       </div>
 
-      <div class="next">
-        <a href="#faq">
-          <img src="img/downarrow.svg" />
-        </a>
+      <div class="next" onclick="document.querySelector('#faq').scrollIntoView({behavior: 'smooth'})">
+        <img src="img/downarrow.svg" />
       </div>
     </div>
 
@@ -86,10 +83,8 @@
         </div>
       </div>
 
-      <div class="next">
-        <a href="#schedule">
-          <img src="img/downarrow.svg" />
-        </a>
+      <div class="next" onclick="document.querySelector('#schedule').scrollIntoView({behavior: 'smooth'})">
+        <img src="img/downarrow.svg" />
       </div>
     </div>
 
@@ -145,10 +140,8 @@
         </div>
       </div>
 
-      <div class="next">
-        <a href="#greeting">
-          <img src="img/uparrow.svg" />
-        </a>
+      <div class="next" onclick="document.querySelector('#greeting').scrollIntoView({behavior: 'smooth'})">
+        <img src="img/uparrow.svg" />
       </div>
     </div>
 
