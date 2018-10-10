@@ -93,6 +93,11 @@ let init = function() {
   // Render things based on whether the name cookie is set
   update();
 
+  // Unhide the landing
+  let inputLanding = document.getElementById("#inputLanding");
+  inputLanding.classList.remove("collapsed");
+  console.log("hi");
+
   // Setup enter keypress handler for name input
   let nameInput = document.getElementsByName("name")[0];
 

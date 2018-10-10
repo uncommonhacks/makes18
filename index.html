@@ -9,7 +9,7 @@
     <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.3/dist/smoothscroll.min.js"></script>
   </head>
   <body>
-    <div class="section-container" id="inputLanding">
+    <div class="section-container collapsed" id="inputLanding">
       <div class="vertically-centered" style="text-align: center">
         <h3>Hi! What's your name?</h3>
         <br>
@@ -17,7 +17,7 @@
       </div>
     </div>
 
-    <div class="section-container collapsed">
+    <div class="section-container">
       <div class="section" id="greeting">
         <div id="left-greeting">
           <h2 style="position: absolute; top: 50%;">Uncommon Makes</h2>
@@ -35,12 +35,15 @@
 
       </div>
 
-      <div class="next" onclick="document.querySelector('#description').scrollIntoView({behavior: 'smooth'})">
-        <img src="img/downarrow.svg" />
+      <div class="next">
+        <a href="#description"
+           onclick="document.querySelector('#description').scrollIntoView({behavior: 'smooth'}); return false;">
+          <img src="img/downarrow.svg" />
+        </a>
       </div>
     </div>
 
-    <div class="section-container collapsed">
+    <div class="section-container">
       <div class="section" id="description">
         <div class="vertically-centered">
             <div class="container section-text">
@@ -49,46 +52,52 @@
         </div>
       </div>
 
-      <div class="next" onclick="document.querySelector('#faq').scrollIntoView({behavior: 'smooth'})">
-        <img src="img/downarrow.svg" />
+      <div class="next">
+        <a href="#faq"
+           onclick="document.querySelector('#faq').scrollIntoView({behavior: 'smooth'}); return false;">
+          <img src="img/downarrow.svg" />
+        </a>
       </div>
     </div>
 
-    <div class="section-container collapsed">
+    <div class="section-container">
       <div class="section" id="faq">
         <div class="vertically-centered">
           <div class="container">
             <h1>FAQ</h1>
 
             <h2 onclick="toggleFAQ(1)">+ Where is Uncommon Makes?</h2>
-            <p id="faq-1" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            <p id="faq-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
 
             <h2 onclick="toggleFAQ(2)">+ I've never been to a hackathon, can I come? What should I bring?</h2>
-            <p id="faq-2" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            <p id="faq-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
 
             <h2 onclick="toggleFAQ(3)">+ Do I have to be a CS major to participate?</h2>
-            <p id="faq-3" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            <p id="faq-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
 
             <h2 onclick="toggleFAQ(4)">+ I'm a graduate student at UChicago, can I come?</h2>
-            <p id="faq-4" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            <p id="faq-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
 
             <h2 onclick="toggleFAQ(5)">+ I don't attend UChicago, can I come?</h2>
-            <p id="faq-5" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            <p id="faq-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
 
             <h2 onclick="toggleFAQ(6)">+ Do I need a team?</h2>
-            <p id="faq-6" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            <p id="faq-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
 
           </div>
 
         </div>
       </div>
 
-      <div class="next" onclick="document.querySelector('#schedule').scrollIntoView({behavior: 'smooth'})">
-        <img src="img/downarrow.svg" />
+      <div class="next">
+        <a href="#schedule"
+           onclick="document.querySelector('#schedule').scrollIntoView({behavior: 'smooth'}); return false;">
+          <img src="img/downarrow.svg" />
+        </a>
       </div>
     </div>
 
-    <div class="section-container collapsed">
+    <div class="section-container">
       <div class="section" id="schedule">
         <div class="vertically-centered">
           <div class="container section-text">
@@ -140,8 +149,11 @@
         </div>
       </div>
 
-      <div class="next" onclick="document.querySelector('#greeting').scrollIntoView({behavior: 'smooth'})">
-        <img src="img/uparrow.svg" />
+      <div class="next">
+        <a href="#greeting"
+           onclick="document.querySelector('#greeting').scrollIntoView({behavior: 'smooth'}); return false;">
+          <img src="img/uparrow.svg" />
+        </a>
       </div>
     </div>
 
