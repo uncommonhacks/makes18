@@ -33,12 +33,28 @@ let resetNameCookie = function() {
   update();
 };
 
+// Check if cookies are enabled by querying the API and setting one
+let cookiesEnabled = function() {
+  let cookieEnabled = navigator.cookieEnabled;
+
+  // If the browser says cookies are enabled, check
+  if (cookieEnabled) {
+    document.cookie = "testcookie=test;";
+    cookieEnabled = document.cookie.indexOf("testcookie") != -1;
+  }
+
+  return cookieEnabled;
+};
+
 // Updates or initializes the page, checking if a name cookie is set and rendering
 // things accordingly
 let update = function() {
-  console.log(navigator.cookieEnabled);
   let name = getCookie("name");
-  if (name != "") {
+  if (!cookiesEnabled() || name != "") {
+    if (name == "") {
+      name = "Sailor";
+    }
+
     // Show collapsed sections and blocks
     let sections = document.getElementsByClassName("section-container");
     Array.from(sections).forEach(elem => {
@@ -53,7 +69,7 @@ let update = function() {
 
     // Display greeting
     let greetingElement = document.getElementById("greeting-name");
-    greetingElement.innerHTML = "Hi " + name + "!";
+    greetingElement.innerHTML = "Hello " + name + "!";
 
     // Display wrong name button
     let wrongNameElement = document.getElementById("wrong-name");
