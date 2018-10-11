@@ -33,30 +33,54 @@ let resetNameCookie = function() {
   update();
 };
 
+// Check if cookies are enabled by querying the API and setting one
+let cookiesEnabled = function() {
+  let cookieEnabled = navigator.cookieEnabled;
+
+  // If the browser says cookies are enabled, check
+  if (cookieEnabled) {
+    document.cookie = "testcookie=test;";
+    cookieEnabled = document.cookie.indexOf("testcookie") != -1;
+  }
+
+  return cookieEnabled;
+};
+
 // Updates or initializes the page, checking if a name cookie is set and rendering
 // things accordingly
 let update = function() {
   let name = getCookie("name");
-  if (name != "") {
-      // Show collapsed sections and blocks
-      let sections = document.getElementsByClassName("section-container");
-      Array.from(sections).forEach(elem => {
-        if (elem.classList.contains("collapsed")) {
-          elem.classList.remove("collapsed");
-        }
-      });
+  if (!cookiesEnabled() || name != "") {
+    if (name == "") {
+      name = "Sailor";
+    }
 
-      // Collapse the name input section
-      let inputLandingElement = document.getElementById("inputLanding");
-      inputLandingElement.classList.add("collapsed");
+    // Show collapsed sections and blocks
+    let sections = document.getElementsByClassName("section-container");
+    Array.from(sections).forEach(elem => {
+      if (elem.classList.contains("collapsed")) {
+        elem.classList.remove("collapsed");
+      }
+    });
 
-      // Display username in right greeting
-      let greetingElement = document.getElementById("right-greeting-name");
-      greetingElement.innerHTML = "Hi <b>" + name + "</b>";
+    // Collapse the name input section
+    let inputLandingElement = document.getElementById("inputLanding");
+    inputLandingElement.classList.add("collapsed");
 
-      // Display wrong name button
-      let wrongNameElement = document.getElementById("wrong-name");
-      wrongNameElement.innerHTML = "Not " + name + "?";
+    // Display greeting
+    let greetingElement = document.getElementById("right-greeting-name");
+    greetingElement.innerHTML = "Hello <b>" + name + "<b>";
+
+    // Display wrong name button
+    let wrongNameElement = document.getElementById("wrong-name");
+    wrongNameElement.innerHTML = "Not " + name + "?";
+
+    // Collapse the faq sections
+    for (let i = 1; i <= 6; i++) {
+      let faqSection = document.getElementById("faq-" + i);
+      faqSection.classList.add("faq-collapsed");
+    }
+    // let faqSections = 
   } else {
     console.log("No name cookie set, rendering the input page.");
 
