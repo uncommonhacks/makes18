@@ -20,15 +20,20 @@
       <div class="section" id="greeting">
         <div id="left-greeting">
           <h2 style="position: absolute; top: 50%;">Uncommon Makes</h2>
-          <a href=""
-             style="position: absolute; top: 85%;">REGISTER</a>
+          <a id="register" 
+            href="">
+            REGISTER
+          </a>
         </div>
 
         <div id="right-greeting">
-          <h1 id="greeting-name"></h1>
-          <h2>11.12.2018</h2>
-          <h3>9 AM - 7 PM</h3>
-          <h3>Polsky Exchange North</h3>
+          <p id="right-greeting-name"></p>
+          <p id="right-greeting-date">11.12.2018</p>
+          <p id="right-greeting-details">9 AM - 7 PM<br/>Polsky Exchange North</p>
+          <!--TODO: paragraph element spans entire page, so clicking anywhere
+          at the vertical level of the wrong-name element will exit. Not
+          sure if this is able to be fixed.
+          -->
           <p id="wrong-name" onclick="resetNameCookie()"></p>
         </div>
 
@@ -44,7 +49,7 @@
     <div class="section-container collapsed">
       <div class="section" id="description">
         <div class="vertically-centered">
-            <div class="container section-text">
+            <div class="container">
               <p><b>Uncommon Makes</b> is a day-long experience focused on encouraging University of Chicago students to engage with new technologies, build a project of their own, and get involved with the tech community on campus. We'll provide space, food, workshops, time, and support for you to have a uniquely uncommon time.</p>
             </div>
         </div>
@@ -61,24 +66,24 @@
       <div class="section" id="faq">
         <div class="vertically-centered">
           <div class="container">
-            <h1>FAQ</h1>
+            <p> <b>FAQ</b> </p>
 
-            <h2 onclick="toggleFAQ(1)">+ Where is Uncommon Makes?</h2>
+            <p onclick="toggleFAQ(1)">+ Where is Uncommon Makes?</p>
             <p id="faq-1" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
 
-            <h2 onclick="toggleFAQ(2)">+ I've never been to a hackathon, can I come? What should I bring?</h2>
+            <p onclick="toggleFAQ(2)">+ I've never been to a hackathon, can I come? What should I bring?</p>
             <p id="faq-2" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
 
-            <h2 onclick="toggleFAQ(3)">+ Do I have to be a CS major to participate?</h2>
+            <p onclick="toggleFAQ(3)">+ Do I have to be a CS major to participate?</p>
             <p id="faq-3" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
 
-            <h2 onclick="toggleFAQ(4)">+ I'm a graduate student at UChicago, can I come?</h2>
+            <p onclick="toggleFAQ(4)">+ I'm a graduate student at UChicago, can I come?</p>
             <p id="faq-4" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
 
-            <h2 onclick="toggleFAQ(5)">+ I don't attend UChicago, can I come?</h2>
+            <p onclick="toggleFAQ(5)">+ I don't attend UChicago, can I come?</p>
             <p id="faq-5" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
 
-            <h2 onclick="toggleFAQ(6)">+ Do I need a team?</h2>
+            <p onclick="toggleFAQ(6)">+ Do I need a team?</p>
             <p id="faq-6" class="faq-collapsed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
 
           </div>
@@ -96,7 +101,7 @@
     <div class="section-container collapsed">
       <div class="section" id="schedule">
         <div class="vertically-centered">
-          <div class="container section-text">
+          <div class="container">
             <p> <b>Schedule</b> <br> </p>
 
             <table style="width:100%">

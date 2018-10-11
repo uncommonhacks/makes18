@@ -7,7 +7,7 @@ html, body {
   padding: 0;
   margin: 0;
   background-image: url("../img/mainpagebrush.svg");
-  /* TODO do somethign about the background not fitting */
+  /* TODO do something about the background not fitting */
   /* also the background is different on the input landing than on the landing, but I'm leaving it for now*/
   height: 100%;
 }
@@ -52,20 +52,12 @@ html, body {
 
 .faq-collapsed {
   display:none;
-}
-
-.section-text{
   font-size: 20pt;
 }
 
-.faq-title{
+/* Basic text is uniform */
+p, td {
   font-size: 25pt;
-}
-
-#left-greeting {
-  width: 50vw;
-  float: left;
-  margin-left: 15px;
 }
 
 #right-greeting {
@@ -74,3 +66,36 @@ html, body {
   text-align: right;
   margin-right: 15px;
 }
+
+#right-greeting-name{
+  font-size: 40pt;
+}
+
+#right-greeting-date{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 50pt;
+}
+
+#right-greeting-details{
+  margin-top: 1vw;
+  font-size: 15pt;
+}
+
+#wrong-name{
+  font-size: 12pt;
+}
+
+#left-greeting {
+  width: 50vw;
+  float: left;
+  margin-left: 15px;
+}
+
+#register{
+  position: absolute; 
+  top: 85%;
+  color: black;
+}
+
+

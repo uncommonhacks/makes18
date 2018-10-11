@@ -50,9 +50,9 @@ let update = function() {
       let inputLandingElement = document.getElementById("inputLanding");
       inputLandingElement.classList.add("collapsed");
 
-      // Display greeting
-      let greetingElement = document.getElementById("greeting-name");
-      greetingElement.innerHTML = "Hi " + name + "!";
+      // Display username in right greeting
+      let greetingElement = document.getElementById("right-greeting-name");
+      greetingElement.innerHTML = "Hi <b>" + name + "</b>";
 
       // Display wrong name button
       let wrongNameElement = document.getElementById("wrong-name");
