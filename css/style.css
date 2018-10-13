@@ -76,12 +76,14 @@ p, td {
 
 #right-greeting-name{
   font-size: 40pt;
+  font-weight: 200;
 }
 
 #right-greeting-date{
   margin-top: 0;
   margin-bottom: 0;
   font-size: 50pt;
+  font-weight: 200;
 }
 
 #right-greeting-details{
@@ -91,6 +93,16 @@ p, td {
 
 #wrong-name{
   font-size: 12pt;
+}
+
+#makes-bg {
+  position: absolute;
+  top: 50%;
+  font-family: "Beef'd";
+  color: grey;
+  margin-left: -30px;
+  margin-top: -20px;
+  font-size: 30pt;
 }
 
 #register{

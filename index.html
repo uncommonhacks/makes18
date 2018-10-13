@@ -22,7 +22,7 @@
     <div class="section-container">
       <div class="section" id="greeting">
         <div id="left-greeting">
-          <h2 style="position: absolute; top: 50%;">Uncommon Makes</h2>
+          <h2 id="makes-bg">Uncommon<br>Makes</h2>
           <a id="register" 
             href="">
             REGISTER
@@ -30,14 +30,12 @@
         </div>
 
         <div id="right-greeting">
-          <p id="right-greeting-name"><noscript>Hello <b>Sailor</b></noscript></p>
-          <p id="right-greeting-date">11.12.2018</p>
-          <p id="right-greeting-details">9 AM - 7 PM<br/>Polsky Exchange North</p>
-          <!--TODO: paragraph element spans entire page, so clicking anywhere
-          at the vertical level of the wrong-name element will exit. Not
-          sure if this is able to be fixed.
-          -->
-          <p id="wrong-name" onclick="resetNameCookie()"></p>
+          <h1 id="right-greeting-name"><noscript>Hello <b>Sailor</b></noscript></h1>
+          <h2 id="right-greeting-date">11.12.2018</h2>
+          <h3 id="right-greeting-details">9 AM - 7 PM<br/>Polsky Exchange North</h3>
+          <div style="float: right;">
+            <p id="wrong-name" onclick="resetNameCookie()"></p>
+          </div>
         </div>
 
       </div>
@@ -73,23 +71,35 @@
           <div class="container">
             <p> <b>FAQ</b> </p>
 
-            <p onclick="toggleFAQ(1)">+ Where is Uncommon Makes?</p>
-            <p id="faq-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            <div onclick="toggleFAQ(1)">
+              <p>+ Where is Uncommon Makes?</p>
+              <p id="faq-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            </div>
 
-            <p onclick="toggleFAQ(2)">+ I've never been to a hackathon, can I come? What should I bring?</p>
-            <p id="faq-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            <div onclick="toggleFAQ(2)">
+              <p>+ I've never been to a hackathon, can I come? What should I bring?</p>
+              <p id="faq-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            </div>
 
-            <p onclick="toggleFAQ(3)">+ Do I have to be a CS major to participate?</p>
-            <p id="faq-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            <div onclick="toggleFAQ(3)">
+              <p>+ Do I have to be a CS major to participate?</p>
+              <p id="faq-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            </div>
 
-            <p onclick="toggleFAQ(4)">+ I'm a graduate student at UChicago, can I come?</p>
-            <p id="faq-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            <div onclick="toggleFAQ(4)">
+              <p >+ I'm a graduate student at UChicago, can I come?</p>
+              <p id="faq-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            </div>
 
-            <p onclick="toggleFAQ(5)">+ I don't attend UChicago, can I come?</p>
-            <p id="faq-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            <div onclick="toggleFAQ(5)">
+              <p>+ I don't attend UChicago, can I come?</p>
+              <p id="faq-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            </div>
 
-            <p onclick="toggleFAQ(6)">+ Do I need a team?</p>
-            <p id="faq-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            <div onclick="toggleFAQ(6)">
+              <p>+ Do I need a team?</p>
+              <p id="faq-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tortor ex.</p>
+            </div>
 
           </div>
 
