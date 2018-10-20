@@ -51,16 +51,23 @@ let cookiesEnabled = function() {
 let update = function() {
   let name = getCookie("name");
   if (name == "") {
-    $("body").css("background-image", "");
+    $("html").css("background-image", "");
   }
-  alert(name);
   if (!cookiesEnabled() || name != "") {
     if (name == "") {
       name = "Sailor";
     }
 
+    height = $(document.height);
+
     if (name == "Sailor") {
-      $("body").css("background-image", "url('./img/mainpagebrush.svg')");
+      $("html").css("background-image", "url('./img/mainpagebrush.svg')");
+      $("html").css("background-size", "auto " + height + "px")
+    }
+
+    if (name != "") {
+      $("html").css("background-image", "url('./img/mainpagebrush.svg')");
+      $("html").css("background-size", "auto " + height + "px")
     }
 
     // Show collapsed sections and blocks
