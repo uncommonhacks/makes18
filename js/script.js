@@ -50,9 +50,17 @@ let cookiesEnabled = function() {
 // things accordingly
 let update = function() {
   let name = getCookie("name");
+  if (name == "") {
+    $("body").css("background-image", "");
+  }
+  alert(name);
   if (!cookiesEnabled() || name != "") {
     if (name == "") {
       name = "Sailor";
+    }
+
+    if (name == "Sailor") {
+      $("body").css("background-image", "url('./img/mainpagebrush.svg')");
     }
 
     // Show collapsed sections and blocks

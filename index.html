@@ -6,16 +6,18 @@
 
     <link href="css/style.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <script defer src="js/script.js"></script>
     <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.3/dist/smoothscroll.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.3.1.slim.js"   integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="   crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="section-container collapsed" id="inputLanding">
-      <div class="vertically-centered" style="text-align: center">
-        <h3>Hi! What's your name?</h3>
+      <div class="vertically-centered screwyou">
+        <span class="hi">Hi! What's your name? (hit enter!)</span>
         <br>
-        <input type="text" name="name">
+        <input class="yourname" type="text" name="name">
       </div>
     </div>
 
@@ -43,7 +45,7 @@
       <div class="next">
         <a href="#description"
            onclick="document.querySelector('#description').scrollIntoView({behavior: 'smooth'}); return false;">
-          <img src="img/downarrow.svg" />
+          <img class="downarrow" src="img/downarrow.svg" />
         </a>
       </div>
     </div>
@@ -60,7 +62,7 @@
       <div class="next">
         <a href="#faq"
            onclick="document.querySelector('#faq').scrollIntoView({behavior: 'smooth'}); return false;">
-          <img src="img/downarrow.svg" />
+          <img class="downarrow" src="img/downarrow.svg" />
         </a>
       </div>
     </div>
@@ -109,7 +111,7 @@
       <div class="next">
         <a href="#schedule"
            onclick="document.querySelector('#schedule').scrollIntoView({behavior: 'smooth'}); return false;">
-          <img src="img/downarrow.svg" />
+          <img class="downarrow" src="img/downarrow.svg" />
         </a>
       </div>
     </div>
@@ -122,43 +124,43 @@
 
             <table style="width:100%">
               <tr>
-                <td>1000 - 1030</td>
+                <td>10:00 - 10:30</td>
                 <td>Opening Ceremony</td>
               </tr>
               <tr>
-                <td>1030 - 1200</td>
+                <td>10:30 - 12:00</td>
                 <td>Workshops</td>
               </tr>
               <tr>
-                <td>1200 - 1230</td>
+                <td>12:00 - 12:30</td>
                 <td>Project Work</td>
               </tr>
               <tr>
-                <td>1230 - 0100</td>
+                <td>12:30 - 01:00</td>
                 <td>Lunch</td>
               </tr>
               <tr>
-                <td>0100 - 0330</td>
+                <td>01:00 - 03:30</td>
                 <td>Project Work</td>
               </tr>
               <tr>
-                <td>0330 - 0400</td>
+                <td>03:30 - 04:00</td>
                 <td>Uncommon Break</td>
               </tr>
               <tr>
-                <td>0400 - 0500</td>
+                <td>04:00 - 05:00</td>
                 <td>Project Work</td>
               </tr>
               <tr>
-                <td>0500 - 0530</td>
+                <td>05:00 - 05:30</td>
                 <td>Project Presentations</td>
               </tr>
               <tr>
-                <td>0530 - 0600</td>
+                <td>05:30 - 06:00</td>
                 <td>Dinner</td>
               </tr>
               <tr>
-                <td>0600 - 0700</td>
+                <td>06:00 - 07:00</td>
                 <td>Closing Ceremony</td>
               </tr>
             </table>
@@ -169,7 +171,7 @@
       <div class="next">
         <a href="#greeting"
            onclick="document.querySelector('#greeting').scrollIntoView({behavior: 'smooth'}); return false;">
-          <img src="img/uparrow.svg" />
+          <img class="downarrow" src="img/uparrow.svg" />
         </a>
       </div>
     </div>
