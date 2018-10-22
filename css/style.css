@@ -21,6 +21,7 @@ html, body {
 #inputLanding {
   background-image: url("../img/cookieintrobrush.svg");
   background-size: cover;
+  overflow: none;
 }
 
 .section-container {
@@ -71,7 +72,7 @@ html, body {
   background: none;
   border-radius: 0px;
   border-style: none;
-  width: 100%;
+  max-width: 100%;
   border-bottom: solid 1px black;
   font-size: 100px;
   font-weight: 500;
