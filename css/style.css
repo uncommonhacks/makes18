@@ -12,8 +12,6 @@ html, body {
   padding: 0;
   margin: 0;
   font-weight: 300;
-  /* TODO do something about the background not fitting */
-  /* also the background is different on the input landing than on the landing, but I'm leaving it for now*/
   height: 100%;
   font-family: 'Montserrat';
 }
@@ -263,4 +261,12 @@ p, td {
     padding-left: 25px;
     padding-right: 25px;
   }
+}
+
+ul {
+  margin: 10px;
+}
+
+ul li {
+  font-size: 20px;
 }
