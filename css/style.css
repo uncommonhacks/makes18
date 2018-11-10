@@ -265,8 +265,9 @@ p, td {
 
 ul {
   margin: 10px;
+  list-style-type: circle;
 }
 
 ul li {
-  font-size: 20px;
+  font-size: 24px;
 }
