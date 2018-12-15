@@ -1,8 +1,5 @@
 # makes18
 
-2018 Uncommon Makes site
+2018 Uncommon Makes site.
 
-## Development notes
-
-- Chrome blocks local cookies. When developing, safari incognito is known to
-  work.
+Make with <3 by Michael Noronha, George Saieed, and Thomas Propson.
